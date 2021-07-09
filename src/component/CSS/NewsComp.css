@@ -1,0 +1,19 @@
+.desc-text {
+    word-wrap: break-word;
+}
+#card{
+    height: 90vh;
+    background-color: #232527;
+}
+#card a:hover{
+    text-decoration: underline;
+}
+/* .news-comp {
+    top: 14vh;
+    left: 15vh;
+} */
+@media (max-width: 988px) {
+    #card{
+        height: 110vh;
+    }
+}
