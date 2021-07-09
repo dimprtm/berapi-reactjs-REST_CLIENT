@@ -11,7 +11,6 @@ import '../../component/CSS/NewsComp.css'
 import { AuthContext } from '../../App';
 import { Redirect, NavLink, Link } from 'react-router-dom';
 
-const qs = require('querystring')
 const baseUrl = 'http://localhost:3001'
 
 
@@ -55,7 +54,7 @@ const ListNews = (props) => {
                     display: 'block'
                 })
                 alert('data id '+ id +' berhasil dihapus')
-                // document.location.reload()
+                window.location.reload()
                 props.history.push('/admin')
             } else {
                 alert('data gagal diahpus!')

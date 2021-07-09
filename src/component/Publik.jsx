@@ -5,10 +5,9 @@ import {
     CardTitle, CardSubtitle, Button, Container,
     Row, Col, CardFooter,
     InputGroup, Input,
-    InputGroupAddon, Alert
+    InputGroupAddon
 } from 'reactstrap';
 import './CSS/NewsComp.css'
-import { Redirect, NavLink, Link } from 'react-router-dom';
 
 const baseUrl = 'http://localhost:3001'
 
