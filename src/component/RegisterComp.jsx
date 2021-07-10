@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const qs = require('querystring')
 const baseUrl = 'http://localhost:3001'
 
-// var Recaptcha = require('react-recaptcha');
-
 function RegisterComp(props) {
 
     // const { dispatch } = useContext(AuthContext)
@@ -29,23 +27,6 @@ function RegisterComp(props) {
     const [data, setData] = useState(initialState)
     const [dataform, setDataForm] = useState(stateForm)
 
-    // specifying your onload callback function
-    // var callback = () => {
-    //     console.log('Done!!!!');
-
-    // };
-
-    // specifying verify callback function
-    // var verifyCallback = (response) => {
-    //     console.log(response);
-    //     if (response) {
-    //         setData({
-    //             ...data,
-    //             isVerified: true
-    //         })
-    //     }
-    // };
-
     const handleInputChange = event => {
         setDataForm({
             ...dataform,
@@ -56,8 +37,6 @@ function RegisterComp(props) {
 
     const handleFormSubmit = event => {
         event.preventDefault()
-
-        // if (data.isVerified) {
             setData({
                 ...data,
                 isSubmitting: true,
@@ -113,10 +92,6 @@ function RegisterComp(props) {
                 .catch(e => {
                     console.log(e)
                 })
-        // }
-        // else {
-        //     alert('Anda diduga robot!')
-        // }
     }
 
     return (
@@ -173,16 +148,6 @@ function RegisterComp(props) {
                                     value={dataform.password}
                                 />
                             </FormGroup>
-                            {/* <FormGroup>
-                                <Recaptcha
-                                    onloadCallback={callback}
-                                    sitekey="6LfQabkZAAAAAK-AjTDGDIB4VTm0RSEtG0XjmePe"
-                                    render="explicit"
-                                    verifyCallback={verifyCallback}
-                                />
-                            </FormGroup> */}
-
-
                             <FormGroup>
                                 <Button disabled={data.isSubmitting}>
                                     {data.isSubmitting ? (
@@ -202,8 +167,6 @@ function RegisterComp(props) {
         </Fragment>
     )
 }
-
-
 
 export default RegisterComp
 

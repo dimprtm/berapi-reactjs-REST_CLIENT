@@ -63,7 +63,6 @@ function App() {
           <Route exact path="/dashboard" component={HomeComp} />
           <Route exact path="/register" component={RegisterComp} />
           <Route exact path="/admin" component={ListNews} />
-          {/* <Route exact path="/news" component={ListNews} /> */}
           <Route exact path="/news/insert" component={InsertNews} />
           <Route exact path="/news/update" component={UpdateNews} />
         </AuthContext.Provider>
